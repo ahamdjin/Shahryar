@@ -6,7 +6,7 @@ import React from "react";
 
 export function Presentation() {
   const profile = {
-    name: "Ahmad Yar",
+    name: "Shahryar Saleem",
     age: "20 years old",
     location: "Lahore, Pakistan",
     description:
