@@ -37,13 +37,13 @@ const InternshipCard = () => {
             <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-lg ring-2 ring-gray-300 relative z-10">
               <img
                 src="/ahmad.jpg"
-                alt="Ahmad Yar"
+                alt="Shahryar Saleem"
                 className="h-full w-full object-cover"
               />
             </div>
           </div>
           <div>
-            <h2 className="text-foreground text-2xl font-semibold">Ahmad Yar</h2>
+            <h2 className="text-foreground text-2xl font-semibold">Shahryar Saleem</h2>
             <p className="text-muted-foreground text-sm">Internship Application</p>
           </div>
         </div>

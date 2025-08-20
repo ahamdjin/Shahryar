@@ -10,10 +10,10 @@ import { loadSlim } from "@tsparticles/slim";
 
 export function Contact() {
   const contactInfo = {
-    name: "Ahmad Yar",
+    name: "Shahryar Saleem",
     email: "ahamdjin34@gmail.com",
     phone: "+92 326-6255946",
-    linkedin: "https://www.linkedin.com/in/ahamd-yar/",
+    linkedin: "https://www.linkedin.com/in/shahryar-saleem/",
     imageUrl: "/ahmad.jpg",
   };
 
