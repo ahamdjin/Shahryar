@@ -10,12 +10,12 @@ export function Presentation() {
     age: "20 years old",
     location: "Lahore, Pakistan",
     description:
-      "Cloud Data Engineer & AI Whisperer. I automate the internet, build pipelines in the cloud ☁️, and my n8n workflows probably have consciousness by now. AI runs through my veins 💉🤖.",
+      "Shopify Alchemist & Funnel Hacker. I turn blank canvases into high-converting landing pages with Pagefly, GemPages, and Framer sprinkles. My GHL automations and flows practically sell in their sleep, while Ringba keeps the calls ringing.",
     src: "/Shahryar.jpg",
     fallbackSrc:
       "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3",
     funFact:
-      "At night, I look like a character who just escaped a horror movie. Still debugging errors in the dark...",
+      "At night, I look like a ghost in the glow of my monitor still wrestling with pixel-perfect tweaks and debugging funnels that swear they work \"this time.\"",
   };
 
   const textVariants = {
@@ -37,12 +37,14 @@ export function Presentation() {
   };
 
   const tags = [
-    "Cloud Engineering",
-    "n8n Wizard",
-    "AI Automator 🤖",
-    "Data Pipeline Architect",
-    "Bug Hunter by Night",
-    "Chai-Fueled Coder ☕",
+    "Shopify Sorcerer",
+    "Landing Page Architect",
+    "Page-Building Maestro (Pagefly & GemPages)",
+    "Funnel Strategist",
+    "Automation Engineer (GHL + Beyond)",
+    "ClickFunnels Conjurer",
+    "Ringba Call Wizard",
+    "Framer Explorer",
   ];
 
   return (
