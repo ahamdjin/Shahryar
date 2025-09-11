@@ -96,8 +96,7 @@ const Avatar = dynamic<AvatarProps>(
                 playsInline
                 loop
               >
-                <source src="/final_memojis.webm" type="video/webm" />
-                <source src="/final_memojis_ios.mp4" type="video/mp4" />
+                <source src="/landing-memojis.webm" type="video/webm" />
               </video>
             )}
           </div>

@@ -67,18 +67,12 @@ export default function Home() {
     const img = new window.Image();
     img.src = '/landing-memojis.png';
 
-    // Précharger les vidéos aussi
+    // Précharger la vidéo du memoji
     const linkWebm = document.createElement('link');
-    linkWebm.rel = 'preload'; // Note: prefetch au lieu de preload
+    linkWebm.rel = 'prefetch';
     linkWebm.as = 'video';
-    linkWebm.href = '/final_memojis.webm';
+    linkWebm.href = '/landing-memojis.webm';
     document.head.appendChild(linkWebm);
-
-    const linkMp4 = document.createElement('link');
-    linkMp4.rel = 'prefetch';
-    linkMp4.as = 'video';
-    linkMp4.href = '/final_memojis_ios.mp4';
-    document.head.appendChild(linkMp4);
   }, []);
 
   return (
