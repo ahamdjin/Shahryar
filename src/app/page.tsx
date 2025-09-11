@@ -12,9 +12,8 @@ import {
   PartyPopper,
   UserRoundSearch,
 } from 'lucide-react';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import GitHubButton from 'react-github-btn';
 
 /* ---------- quick-question data ---------- */
@@ -62,19 +61,6 @@ export default function Home() {
     },
   };
 
-  useEffect(() => {
-    // Précharger les assets du chat en arrière-plan
-    const img = new window.Image();
-    img.src = '/landing-memojis.png';
-
-    // Précharger la vidéo du memoji
-    const linkWebm = document.createElement('link');
-    linkWebm.rel = 'prefetch';
-    linkWebm.as = 'video';
-    linkWebm.href = '/landing-memojis.webm';
-    document.head.appendChild(linkWebm);
-  }, []);
-
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-10 md:pb-20">
       {/* big blurred footer word */}
@@ -120,18 +106,6 @@ export default function Home() {
           My Portfolio
         </h1>
       </motion.div>
-
-      {/* centre memoji */}
-      <div className="relative z-10 h-52 w-48 overflow-hidden sm:h-72 sm:w-72">
-        <Image
-          src="/landing-memojis.png"
-          alt="Hero memoji"
-          width={2000}
-          height={2000}
-          priority
-          className="translate-y-14 scale-[2] object-cover"
-        />
-      </div>
 
       {/* input + quick buttons */}
       <motion.div
