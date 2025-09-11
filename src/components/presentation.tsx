@@ -11,7 +11,7 @@ export function Presentation() {
     location: "Lahore, Pakistan",
     description:
       "Cloud Data Engineer & AI Whisperer. I automate the internet, build pipelines in the cloud ☁️, and my n8n workflows probably have consciousness by now. AI runs through my veins 💉🤖.",
-    src: "/ahmad.jpg",
+    src: "/Shahryar.jpg",
     fallbackSrc:
       "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3",
     funFact:
