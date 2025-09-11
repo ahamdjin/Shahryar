@@ -36,7 +36,7 @@ const InternshipCard = () => {
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 to-purple-600 blur-xl opacity-30 animate-pulse" />
             <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-lg ring-2 ring-gray-300 relative z-10">
               <img
-                src="/ahmad.jpg"
+                src="/Shahryar.jpg"
                 alt="Shahryar Saleem"
                 className="h-full w-full object-cover"
               />
