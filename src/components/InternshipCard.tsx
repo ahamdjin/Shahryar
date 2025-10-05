@@ -43,8 +43,8 @@ const InternshipCard = () => {
             </div>
           </div>
           <div>
-            <h2 className="text-foreground text-2xl font-semibold">Shahryar Saleem</h2>
-            <p className="text-muted-foreground text-sm">Internship Application</p>
+            <h2 className="text-foreground text-2xl font-semibold">Work with Shahryar</h2>
+            <p className="text-muted-foreground text-sm">Shopify • Funnels • Automations</p>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ const InternshipCard = () => {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
           </span>
-          Live
+          Taking new projects
         </span>
       </motion.div>
 
@@ -65,8 +65,8 @@ const InternshipCard = () => {
             <CalendarDays className="mt-1 h-5 w-5 text-blue-500" />
           </motion.div>
           <div>
-            <p className="text-foreground text-sm font-medium">Duration</p>
-            <p className="text-muted-foreground text-sm">3–6 months (flexible)</p>
+            <p className="text-foreground text-sm font-medium">Perfect for</p>
+            <p className="text-muted-foreground text-sm">Shopify launches, funnel builds, paid ads scaling</p>
           </div>
         </div>
         <div className="flex items-start gap-3">
@@ -75,7 +75,7 @@ const InternshipCard = () => {
           </motion.div>
           <div>
             <p className="text-foreground text-sm font-medium">Location</p>
-            <p className="text-muted-foreground text-sm">Remote / Hybrid (Pakistan)</p>
+            <p className="text-muted-foreground text-sm">Kuala Lumpur • Remote worldwide</p>
           </div>
         </div>
       </motion.div>
@@ -86,26 +86,19 @@ const InternshipCard = () => {
           <Code2 className="mt-1 h-5 w-5 text-purple-500" />
         </motion.div>
         <div className="w-full">
-          <p className="text-foreground text-sm font-medium mb-2">Tech Stack</p>
+          <p className="text-foreground text-sm font-medium mb-2">Services</p>
           <div className="text-muted-foreground grid grid-cols-1 gap-y-1 text-sm sm:grid-cols-2">
             <ul className="list-disc space-y-1 pl-4">
-              <li>Cloud Engineering (Serverless, APIs, IAM)</li>
-              <li>n8n, Make.com, JavaScript, Python</li>
-              <li>OpenAI, Vapi.ai, Ollama, AI Agents</li>
-              <li>Shopify Store Automation, Liquid + GraphQL</li>
+              <li>Custom Shopify store setup & CRO</li>
+              <li>Landing pages & funnel builds</li>
+              <li>GoHighLevel automations & pipelines</li>
+              <li>Ringba tracking & IVR workflows</li>
             </ul>
             <ul className="list-disc space-y-1 pl-4">
-              <li>Power BI, Excel, Google Sheets API</li>
-              <li>Voice + Data Flows into CRM & Dashboards</li>
-              <li>RESTful APIs, Webhooks, JSON Transform</li>
-              <li>
-                <a
-                  href="/chat?query=What%20are%20your%20skills%3F%20Give%20me%20a%20list%20of%20your%20soft%20and%20hard%20skills."
-                  className="cursor-pointer items-center text-blue-500 underline hover:text-blue-700"
-                >
-                  See more
-                </a>
-              </li>
+              <li>Paid ads management (FB, IG, TikTok, Google)</li>
+              <li>CAPI, Pixel & analytics infrastructure</li>
+              <li>Automations with Zapier, Make & webhooks</li>
+              <li>AI call agents with Vapi.ai, Twilio, Voiceflow</li>
             </ul>
           </div>
         </div>
@@ -113,27 +106,29 @@ const InternshipCard = () => {
 
       {/* What I bring */}
       <motion.div variants={fadeInUp} className="mt-10">
-        <p className="text-foreground mb-2 text-lg font-semibold">What I bring</p>
+        <p className="text-foreground mb-2 text-lg font-semibold">How I help</p>
         <p className="text-foreground text-sm">
-         Crafting end-to-end automation & data pipelines with the slickness of a modern AI ninja on cloud steroids! I’ve slung together full-stack systems that juggle voice, APIs, spreadsheets, dashboards, and sassy AI agents like a circus pro. Famous for rock-solid reliability, lightning-fast iteration, and delivering real-world wins with a side of chuckles!
+          Partner with founders, agencies, and performance teams to design, launch, and scale revenue engines. From validating products to wiring automations and dialing in paid traffic, every deliverable is built to generate measurable growth.
         </p>
       </motion.div>
 
       {/* Goal */}
       <motion.div variants={fadeInUp} className="mt-8">
-        <p className="text-foreground mb-2 text-lg font-semibold">Goal</p>
+        <p className="text-foreground mb-2 text-lg font-semibold">Ready to collaborate?</p>
         <p className="text-foreground text-sm">
-          Join a bold, innovative team building AI-powered tools that matter. I want to improve fast, contribute hard, and leave a mark. I’m fast, flexible, and HUNGRYYYYY 🔥
+          Let’s build a high-converting store, an automated funnel, or a profitable ad engine together. Bring the goal, I’ll bring the systems, creative, and reporting to hit it.
         </p>
       </motion.div>
 
       {/* Contact button */}
       <motion.div variants={fadeInUp} className="mt-10 flex justify-center">
         <a
-          href="/chat?query=Can%20I%20get%20you%20contact%20info"
+          href="https://calendly.com/shahryarsaleem/30min"
           className="cursor-pointer rounded-full bg-black px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-zinc-800 shadow-md"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Contact me
+          Book a free 30-min consultation
         </a>
       </motion.div>
     </motion.div>

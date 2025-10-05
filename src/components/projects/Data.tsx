@@ -1,123 +1,61 @@
 import Image from 'next/image';
-import { Image as Img } from 'lucide-react';
 import { ChevronRight, Link } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
-import { url } from 'inspector';
 
 // Enhanced project content array with all projects
 const PROJECT_CONTENT = [
   {
-    title: 'Ringba Call Tracking & Dashboard System',
-        description:
-          'An end-to-end pipeline that automates Ringba call data ingestion and reporting. From API data fetch to AWS Lambda, Glue transformation, RDS storage, and Power BI dashboard creation—this project automates everything. Designed for a client to monitor marketing calls, trends, and campaign performance.',
-        techStack: [
-          'AWS Lambda',
-          'AWS EventBridge',
-          'AWS S3',
-          'AWS Glue (PySpark)',
-          'PostgreSQL (RDS)',
-          'Power BI',
-          'Python',
-          'Ringba API'
-        ],
-        date: '2025',
-        links: [
-          {
-            name: 'Blog Post',
-            url: 'https://ahamdjin.github.io/Ahmad-YAR/blog/Project-Ringba/',
-          }
-        ],
-        images: [
-          {
-            src: '/ringba-architecture-diagram.png',
-            alt: 'High-Level Architecture Diagram of the Ringba Data Pipeline',
-          },
-          {
-            src: '/lambda-fetch-s3-code.png',
-            alt: 'Lambda Function Code to Fetch Ringba Data and Upload to S3',
-          },
-          {
-            src: '/glue-job-script.png',
-            alt: 'AWS Glue Job Script Showing PySpark Transformations',
-          },
-          {
-            src: '/cloudwatch-glue-logs.png',
-            alt: 'CloudWatch Logs Showing Success and Row Counts',
-          },
-          {
-            src: '/powerbi-call-dashboard .png',
-            alt: 'Power BI Dashboard Showing Ringba Call Metrics',
-          },
-          {
-            src: '/powerbi-query-editor.png',
-            alt: 'Power BI Query Editor Connecting to PostgreSQL via ODBC',
-          },
-        ],
-    },
+    title: 'RipStick Shopify Store',
+    description:
+      'Built and scaled a dropshipping Shopify store to $1M in 12 months with conversion-focused design, validated products, and relentless CRO testing.',
+    techStack: ['Shopify', 'PageFly', 'Facebook Ads', 'Klaviyo'],
+    date: '2023',
+    images: [
+      {
+        src: '/projects/ripstick.jpg',
+        alt: 'RipStick Shopify Store homepage mockup',
+      },
+    ],
+  },
   {
-        title: 'Unlocking Lending Insights',
-        description:
-          'A two-phase data analytics project for TheLook Fintech that analyzes loan activity and delivers a Looker dashboard for decision-making. The report reveals trends from 2012–2019 and visualizes key loan health metrics including outstanding balance, borrower location, and income index.',
-        techStack: [
-          'looker Studio',
-          'Excel/CSV',
-          'Data Analyst',
-          'Data Modeling',
-          'SQL',
-          'Data Visualization'
-        ],
-        date: '2025',
-        links: [
-          {
-            name: 'Case Study',
-            url: 'https://ahamdjin.github.io/Ahmad-YAR/blog/Lending-Insights/',
-          }
-        ],
-        images: [
-          {
-            src: '/loan-count-by-year.png',
-            alt: 'Line chart showing Loan Count by Year from 2012 to 2019',
-          },
-          {
-            src: '/interactive-dashboard.png',
-            alt: 'Power BI Dashboard with key loan metrics and borrower segmentation',
-          }
-        ],
+    title: 'GHL Automation Funnel for Agency',
+    description:
+      'Implemented a full GoHighLevel funnel with pipelines, automated nurture sequences, and SMS/email follow-ups that quadrupled booked calls in two months.',
+    techStack: ['GoHighLevel', 'Zapier', 'Calendly', 'Twilio'],
+    date: '2024',
+    images: [
+      {
+        src: '/projects/ghl-funnel.jpg',
+        alt: 'GoHighLevel automation dashboard for agency funnel',
       },
-    {  
-       title: 'Voice-Based Table Booking for Restaurang Göteborg',
-        description:
-          'Developed for a real client, this project combines Voiceflow, Twilio, and n8n to let customers book restaurant tables via voice call. When a user dials the Twilio number, they interact with a Voiceflow assistant that gathers booking details. These details are forwarded to n8n, which adds the reservation to Google Calendar and sends an SMS confirmation. The workflow includes full error handling and logging.',
-        techStack: [
-          'n8n',
-          'Twilio Voice',
-          'Google Calendar API',
-          'Voiceflow',
-          'Node.js (for custom webhook handling)',
-          'Twilio SMS',
-        ],
-        date: '2025',
-        links: [
-          {
-            name: 'Workflow Screenshots',
-            url: '/restaurang-goteborg-n8n.png',
-          },
-        ],
-        images: [
-          {
-            src: '/restaurang-goteborg-voiceflow.png',
-            alt: 'Voiceflow assistant handling table booking call',
-          },
-          {
-            src: '/restaurang-goteborg-n8n.png',
-            alt: 'n8n automation flow integrating Twilio, Google Calendar, and SMS',
-          },
-          {
-            src: '/restaurang-goteborg-sms-confirmation.png',
-            alt: 'SMS confirmation sent to customer after voice booking',
-          },
-        ],
+    ],
+  },
+  {
+    title: 'Ringba Tracking Setup',
+    description:
+      'Deployed Ringba call tracking with dynamic routing, IVR, and webhook integrations to deliver 100% attribution for a performance marketing team.',
+    techStack: ['Ringba', 'Webhooks', 'Google Sheets', 'API Integrations'],
+    date: '2024',
+    images: [
+      {
+        src: '/projects/ringba.jpg',
+        alt: 'Ringba tracking configuration overview',
       },
+    ],
+  },
+  {
+    title: 'Paid Ads Case Study',
+    description:
+      'Managed $120k+ in ad spend across Facebook, TikTok, and Google, generating $1.2M in tracked revenue with a blended 4.7x ROAS.',
+    techStack: ['Facebook Ads', 'TikTok Ads', 'Google Analytics'],
+    date: '2023',
+    images: [
+      {
+        src: '/projects/ads.jpg',
+        alt: 'Paid ads performance charts showing ROAS growth',
+      },
+    ],
+  },
 ];
 
 // Define interface for project prop
@@ -224,21 +162,27 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
 // Main data export with updated content
 export const data = [
   {
-    category: 'Data Engineering',
-    title: 'Ringba Call Tracking Automation',
-    src: '/Ringba-Preview.png',
-    content: <ProjectContent project={{ title: 'Ringba Call Tracking & Dashboard System' }} />,
+    category: 'Shopify',
+    title: 'RipStick Shopify Store',
+    src: '/projects/ripstick.jpg',
+    content: <ProjectContent project={{ title: 'RipStick Shopify Store' }} />,
   },
   {
-    category: 'Data Analytics',
-    title: 'Metric Mindset',
-    src: '/Unlocking-Lending-Insights-preview.png',
-    content: <ProjectContent project={{ title: 'Unlocking Lending Insights' }} />,
+    category: 'Automations',
+    title: 'GHL Automation Funnel for Agency',
+    src: '/projects/ghl-funnel.jpg',
+    content: <ProjectContent project={{ title: 'GHL Automation Funnel for Agency' }} />,
   },
   {
-    category: 'AI Voice Automation',
-    title: 'AI Agent',
-    src: '/restaurang-goteborg-preview.png',
-    content: <ProjectContent project={{ title: 'Voice-Based Table Booking for Restaurang Göteborg' }} />,
+    category: 'Tracking',
+    title: 'Ringba Tracking Setup',
+    src: '/projects/ringba.jpg',
+    content: <ProjectContent project={{ title: 'Ringba Tracking Setup' }} />,
+  },
+  {
+    category: 'Paid Ads',
+    title: 'Paid Ads Case Study',
+    src: '/projects/ads.jpg',
+    content: <ProjectContent project={{ title: 'Paid Ads Case Study' }} />,
   },
 ];
