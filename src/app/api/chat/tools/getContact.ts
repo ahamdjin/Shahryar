@@ -6,6 +6,6 @@ export const getContact = tool({
     'This tool show a my contact informations.',
   parameters: z.object({}),
   execute: async () => {
-    return "📩 Email: shahryar@shahryarsaleem.com\n📞 Phone: +13073102584\n📅 Book a Call: https://calendly.com/shahryarsaleem/30min";
+    return '📩 Email: shahryar@shahryarsaleem.com\n📞 Phone: +13073102584\n📅 Book a Call: https://calendly.com/shahryarsaleem/30min';
   },
 });

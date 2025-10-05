@@ -1,90 +1,103 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { CalendarCheck2, Rocket, Settings2, Sparkles, Target } from "lucide-react";
+import { motion } from 'framer-motion';
+import { CalendarCheck2, Rocket, Settings2, Sparkles, Target } from 'lucide-react';
 
-const experience = [
+const journey = [
   {
-    year: "2015",
-    title: "Started as Shopify Expert",
-    description:
-      "Began my journey building Shopify stores, learning theme customization, and mastering the Shopify ecosystem.",
     icon: <Sparkles className="h-6 w-6 text-emerald-500" />,
+    title: '2015 — Started as Shopify Expert',
+    description: (
+      <p className="text-muted-foreground text-sm">
+        Built my first Shopify stores, learned theme customization, and obsessed over how design choices impact conversion.
+      </p>
+    ),
   },
   {
-    year: "2016 - Present",
-    title: "Freelance Shopify Developer & Consultant",
-    description:
-      "Launched my freelancing career. Built and optimized 100+ Shopify stores, focusing on conversion-driven designs and product validation for dropshipping brands.",
     icon: <Target className="h-6 w-6 text-blue-500" />,
+    title: '2016 – Present — Freelance Shopify Developer & Consultant',
+    description: (
+      <p className="text-muted-foreground text-sm">
+        Launched my freelance practice and have since delivered 100+ stores with validated products, optimized layouts, and data-backed CRO for dropshipping brands.
+      </p>
+    ),
   },
   {
-    year: "2020 - Present",
-    title: "Performance Marketer (Paid Ads)",
-    description:
-      "Ran paid ads on Facebook, Instagram, Google, and TikTok, generating over $5M+ in sales for clients. Specialized in eCom growth, funnel optimization, and scaling campaigns profitably.",
     icon: <Rocket className="h-6 w-6 text-purple-500" />,
+    title: '2020 – Present — Performance Marketer (Paid Ads)',
+    description: (
+      <p className="text-muted-foreground text-sm">
+        Managed Facebook, Instagram, Google, and TikTok campaigns pushing $5M+ in tracked revenue through tight offers, creative testing, and funnel optimization.
+      </p>
+    ),
   },
   {
-    year: "2023 - Present",
-    title: "GHL Automation Expert",
-    description:
-      "Built automated funnels, CRM workflows, and pipelines using GoHighLevel for agencies and eCommerce brands. Focused on automating lead nurturing and sales follow-ups.",
     icon: <Settings2 className="h-6 w-6 text-amber-500" />,
+    title: '2023 – Present — GHL Automation Expert',
+    description: (
+      <p className="text-muted-foreground text-sm">
+        Architected GoHighLevel automations—pipelines, CRM workflows, and nurture sequences—that keep leads engaged without manual follow-up.
+      </p>
+    ),
   },
   {
-    year: "2024 - Present",
-    title: "Exploring AI Call Agents",
-    description:
-      "Currently learning and experimenting with AI call agent systems using Vapi.ai and Twilio to enhance client engagement and lead follow-up automations.",
     icon: <CalendarCheck2 className="h-6 w-6 text-rose-500" />,
+    title: '2024 – Present — Exploring AI Call Agents',
+    description: (
+      <p className="text-muted-foreground text-sm">
+        Prototyping Vapi.ai and Twilio call agents that qualify leads, sync to CRMs, and trigger automations for faster responses.
+      </p>
+    ),
   },
 ];
 
 const Experience = () => {
   return (
     <div className="relative z-0 mx-auto w-full max-w-5xl px-6 py-20 font-sans">
+      {/* Subtle animated background particles */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.4 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
-        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-white via-gray-100 to-white"
+        transition={{ duration: 2, ease: 'easeInOut' }}
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-white via-gray-100 to-white animate-pulse"
       />
 
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="mb-12 text-center text-4xl font-bold text-foreground"
+        className="text-center text-4xl font-bold text-foreground mb-12"
       >
-        Experience
+        My Experience Journey 🚀
       </motion.h2>
 
-      <div className="relative space-y-12 border-l-2 border-muted pl-8">
-        {experience.map((item, index) => (
+      <div className="relative border-l-2 border-muted pl-6 space-y-16">
+        {journey.map((item, idx) => (
           <motion.div
-            key={item.year}
+            key={idx}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{ duration: 0.6, delay: idx * 0.1 }}
             viewport={{ once: true }}
             className="relative pl-10"
           >
+            {/* Timeline Dot with Icon Animation */}
             <motion.div
-              initial={{ scale: 0.8, rotate: -10 }}
+              initial={{ scale: 0.8, rotate: -15 }}
               whileInView={{ scale: 1, rotate: 0 }}
-              transition={{ type: "spring", stiffness: 200, damping: 12 }}
-              className="absolute left-[-1.3rem] top-1 rounded-full bg-background p-2 shadow-md"
+              transition={{ type: 'spring', stiffness: 200, damping: 10 }}
+              className="absolute left-[-1.2rem] top-1 z-0 bg-background p-2 rounded-full shadow-md"
             >
               {item.icon}
             </motion.div>
 
-            <div className="rounded-xl bg-card/70 p-6 shadow-lg backdrop-blur-md">
-              <p className="text-sm font-medium text-primary">{item.year}</p>
-              <h3 className="mt-1 text-xl font-semibold text-foreground">{item.title}</h3>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                {item.description}
-              </p>
+            {/* Content */}
+            <div className="bg-card/70 shadow-lg rounded-xl p-6 backdrop-blur-md">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                {item.title}
+              </h3>
+              <div>{item.description}</div>
+
             </div>
           </motion.div>
         ))}

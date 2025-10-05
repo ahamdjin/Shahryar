@@ -1,43 +1,7 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { ArrowRight, Calendar, CheckCircle2, Rocket } from "lucide-react";
-
-const services = {
-  intro:
-    "Let's build something powerful together 🚀. Whether you're looking for a high-converting Shopify store, a complete funnel, or automations that scale — I've got you covered.",
-  offerings: [
-    {
-      title: "Shopify Store Setup",
-      description:
-        "Custom Shopify stores built for conversion — from theme setup to product pages and checkout optimization.",
-    },
-    {
-      title: "Landing Pages & Funnels",
-      description:
-        "Design and build landing pages that drive results. High-impact funnels for both eCom and service-based businesses.",
-    },
-    {
-      title: "GHL Automations",
-      description:
-        "Automate your workflows, follow-ups, and lead nurturing using GoHighLevel and third-party integrations.",
-    },
-    {
-      title: "Ringba Tracking Setup",
-      description:
-        "Setup call tracking, IVR, and attribution dashboards to monitor performance marketing campaigns effectively.",
-    },
-    {
-      title: "Paid Ads Management",
-      description:
-        "Facebook, Instagram, Google, and TikTok campaigns that scale — tested strategies delivering $5M+ sales.",
-    },
-  ],
-  callToAction: {
-    text: "Book a free 30-min consultation",
-    link: "https://calendly.com/shahryarsaleem/30min",
-  },
-};
+import { motion } from 'framer-motion';
+import { CalendarDays, Code2, Globe } from 'lucide-react';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -45,13 +9,13 @@ const fadeInUp = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.15,
+      delay: i * 0.2,
       duration: 0.6,
     },
   }),
 };
 
-const ServicesCard = () => {
+const InternshipCard = () => {
   return (
     <motion.div
       initial="hidden"
@@ -63,50 +27,112 @@ const ServicesCard = () => {
           },
         },
       }}
-      className="bg-accent mx-auto mt-8 w-full max-w-4xl rounded-3xl px-6 py-10 font-sans shadow-2xl backdrop-blur-md sm:px-10 md:px-16"
+      className="bg-accent mx-auto mt-8 w-full max-w-4xl rounded-3xl px-6 py-8 font-sans shadow-2xl backdrop-blur-md sm:px-10 md:px-16 md:py-12"
     >
-      <motion.div variants={fadeInUp} className="flex flex-col gap-4 text-center">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-black text-white shadow-lg">
-          <Rocket className="h-7 w-7" />
-        </div>
-        <h2 className="text-foreground text-3xl font-semibold">Work with Shahryar</h2>
-        <p className="text-muted-foreground text-sm md:text-base">{services.intro}</p>
-      </motion.div>
-
-      <motion.div variants={fadeInUp} className="mt-8 space-y-6">
-        {services.offerings.map((service, index) => (
-          <motion.div
-            key={service.title}
-            custom={index + 1}
-            variants={fadeInUp}
-            className="flex flex-col gap-3 rounded-2xl border border-border/40 bg-card/80 p-6 text-left shadow-sm backdrop-blur"
-          >
-            <div className="flex items-center gap-3">
-              <CheckCircle2 className="h-5 w-5 text-primary" />
-              <h3 className="text-lg font-semibold text-foreground">{service.title}</h3>
+      {/* Header */}
+      <motion.div variants={fadeInUp} className="mb-6 flex flex-col items-center sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-4">
+          <div className="relative h-16 w-16">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 to-purple-600 blur-xl opacity-30 animate-pulse" />
+            <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-lg ring-2 ring-gray-300 relative z-10">
+              <img
+                src="/Shahryar.jpg"
+                alt="Shahryar Saleem"
+                className="h-full w-full object-cover"
+              />
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
-          </motion.div>
-        ))}
+          </div>
+          <div>
+            <h2 className="text-foreground text-2xl font-semibold">Work with Shahryar</h2>
+            <p className="text-muted-foreground text-sm">Shopify • Funnels • Automations</p>
+          </div>
+        </div>
+
+        {/* Live badge */}
+        <span className="mt-4 flex items-center gap-1 rounded-full border border-green-500 px-3 py-0.5 text-sm font-medium text-green-500 shadow-sm sm:mt-0">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+          </span>
+          Taking new projects
+        </span>
       </motion.div>
 
-      <motion.div variants={fadeInUp} className="mt-10 flex flex-col items-center gap-3 text-center">
-        <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-          <Calendar className="h-4 w-4 text-primary" />
-          <span>Limited availability for new projects</span>
+      {/* Internship Info */}
+      <motion.div variants={fadeInUp} className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="flex items-start gap-3">
+          <motion.div animate={{ y: [0, -4, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+            <CalendarDays className="mt-1 h-5 w-5 text-blue-500" />
+          </motion.div>
+          <div>
+            <p className="text-foreground text-sm font-medium">Perfect for</p>
+            <p className="text-muted-foreground text-sm">Shopify launches, funnel builds, paid ads scaling</p>
+          </div>
         </div>
+        <div className="flex items-start gap-3">
+          <motion.div animate={{ y: [0, -4, 0] }} transition={{ duration: 2.2, repeat: Infinity }}>
+            <Globe className="mt-1 h-5 w-5 text-green-500" />
+          </motion.div>
+          <div>
+            <p className="text-foreground text-sm font-medium">Location</p>
+            <p className="text-muted-foreground text-sm">Kuala Lumpur • Remote worldwide</p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Tech stack */}
+      <motion.div variants={fadeInUp} className="mt-8 flex items-start gap-3 sm:col-span-2">
+        <motion.div animate={{ rotate: [0, 10, -10, 0] }} transition={{ repeat: Infinity, duration: 5 }}>
+          <Code2 className="mt-1 h-5 w-5 text-purple-500" />
+        </motion.div>
+        <div className="w-full">
+          <p className="text-foreground text-sm font-medium mb-2">Services</p>
+          <div className="text-muted-foreground grid grid-cols-1 gap-y-1 text-sm sm:grid-cols-2">
+            <ul className="list-disc space-y-1 pl-4">
+              <li>Custom Shopify store setup & CRO</li>
+              <li>Landing pages & funnel builds</li>
+              <li>GoHighLevel automations & pipelines</li>
+              <li>Ringba tracking & IVR workflows</li>
+            </ul>
+            <ul className="list-disc space-y-1 pl-4">
+              <li>Paid ads management (FB, IG, TikTok, Google)</li>
+              <li>CAPI, Pixel & analytics infrastructure</li>
+              <li>Automations with Zapier, Make & webhooks</li>
+              <li>AI call agents with Vapi.ai, Twilio, Voiceflow</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* What I bring */}
+      <motion.div variants={fadeInUp} className="mt-10">
+        <p className="text-foreground mb-2 text-lg font-semibold">How I help</p>
+        <p className="text-foreground text-sm">
+          Partner with founders, agencies, and performance teams to design, launch, and scale revenue engines. From validating products to wiring automations and dialing in paid traffic, every deliverable is built to generate measurable growth.
+        </p>
+      </motion.div>
+
+      {/* Goal */}
+      <motion.div variants={fadeInUp} className="mt-8">
+        <p className="text-foreground mb-2 text-lg font-semibold">Ready to collaborate?</p>
+        <p className="text-foreground text-sm">
+          Let’s build a high-converting store, an automated funnel, or a profitable ad engine together. Bring the goal, I’ll bring the systems, creative, and reporting to hit it.
+        </p>
+      </motion.div>
+
+      {/* Contact button */}
+      <motion.div variants={fadeInUp} className="mt-10 flex justify-center">
         <a
-          href={services.callToAction.link}
+          href="https://calendly.com/shahryarsaleem/30min"
+          className="cursor-pointer rounded-full bg-black px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-zinc-800 shadow-md"
           target="_blank"
           rel="noopener noreferrer"
-          className="group inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 font-semibold text-white shadow-md transition-colors duration-300 hover:bg-zinc-800"
         >
-          {services.callToAction.text}
-          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          Book a free 30-min consultation
         </a>
       </motion.div>
     </motion.div>
   );
 };
 
-export default ServicesCard;
+export default InternshipCard;
