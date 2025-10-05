@@ -1,163 +1,90 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Briefcase, BookOpen, Rocket, Award } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { SiUpwork, SiFiverr } from 'react-icons/si';
+import { motion } from "framer-motion";
+import { CalendarCheck2, Rocket, Settings2, Sparkles, Target } from "lucide-react";
 
-const journey = [
+const experience = [
   {
-    icon: <Briefcase className="h-6 w-6 text-blue-500" />,
-    title: '🛍️ Shopify Assistant (2023 - 2024)',
-    description: (
-      <ul className="list-disc pl-5 space-y-1 text-muted-foreground text-sm">
-        <li>Conducted deep product research for trending items.</li>
-        <li>Built Shopify themes and customized storefronts.</li>
-        <li>Managed product listings, orders, and store analytics.</li>
-        <li>Occasionally broke themes (and got scolded 😅).</li>
-      </ul>
-    ),
+    year: "2015",
+    title: "Started as Shopify Expert",
+    description:
+      "Began my journey building Shopify stores, learning theme customization, and mastering the Shopify ecosystem.",
+    icon: <Sparkles className="h-6 w-6 text-emerald-500" />,
   },
   {
-    icon: <BookOpen className="h-6 w-6 text-green-500" />,
-    title: '📚 Skill Uplift – Self-Taught Phase',
-    description: (
-      <ul className="list-disc pl-5 space-y-1 text-muted-foreground text-sm">
-        <li>Completed Cloud Data Analytics training via CloudBoost.</li>
-        <li>Learned and applied Python, SQL, JSON, and JavaScript.</li>
-        <li>Designed impactful dashboards using Excel & Power BI.</li>
-        <li>Built, cleaned, and automated data pipelines solo.</li>
-      </ul>
-    ),
+    year: "2016 - Present",
+    title: "Freelance Shopify Developer & Consultant",
+    description:
+      "Launched my freelancing career. Built and optimized 100+ Shopify stores, focusing on conversion-driven designs and product validation for dropshipping brands.",
+    icon: <Target className="h-6 w-6 text-blue-500" />,
   },
   {
+    year: "2020 - Present",
+    title: "Performance Marketer (Paid Ads)",
+    description:
+      "Ran paid ads on Facebook, Instagram, Google, and TikTok, generating over $5M+ in sales for clients. Specialized in eCom growth, funnel optimization, and scaling campaigns profitably.",
     icon: <Rocket className="h-6 w-6 text-purple-500" />,
-    title: '🚀 Freelance Journey Begins (2025)',
-    description: (
-      <ul className="list-disc pl-5 space-y-1 text-muted-foreground text-sm">
-        <li>Started offering services on Upwork and Fiverr.</li>
-        <li>Specialized in API integrations and workflow automation.</li>
-        <li>Delivered projects using Make.com and n8n platforms.</li>
-        <li>Built scalable solutions for small businesses and teams.</li>
-        <li className="mt-2">
-          <Link
-            href="https://www.ahmadyar.site/chat?query=can%20you%20share%20your%20experience"
-            className="text-blue-600 hover:underline text-sm font-medium"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            📁 Click here to see my Projects
-          </Link>
-        </li>
-      </ul>
-    ),
-    links: [
-      {
-        label: <div className="flex items-center gap-2"><SiUpwork className="text-green-600" /> Upwork</div>,
-        href: 'https://www.upwork.com/freelancers/ahamdyaar',
-      },
-      {
-        label: <div className="flex items-center gap-2"><SiFiverr className="text-[#1DBF73]" /> Fiverr</div>,
-        href: 'https://www.fiverr.com/ahmad_yxr',
-      },
-    ],
   },
   {
-    icon: <Award className="h-6 w-6 text-yellow-500" />,
-    title: '🎓 Certified & Dangerous (2024)',
-    description: (
-      <ul className="list-disc pl-5 space-y-1 text-muted-foreground text-sm">
-        <li>Google Cloud Data Analytics Certificate – strong foundation in cloud-based data handling and reporting.</li>
-        <li>Make.com Expert Certificate – advanced knowledge in no-code automations and system integrations.</li>
-        <li>Real proof of skills you can actually trust 👀</li>
-      </ul>
-    ),
-    certificates: [
-      '/google-cloud-data-analytics-certificate.png',
-      '/make-com-certificate.png'
-    ]
+    year: "2023 - Present",
+    title: "GHL Automation Expert",
+    description:
+      "Built automated funnels, CRM workflows, and pipelines using GoHighLevel for agencies and eCommerce brands. Focused on automating lead nurturing and sales follow-ups.",
+    icon: <Settings2 className="h-6 w-6 text-amber-500" />,
+  },
+  {
+    year: "2024 - Present",
+    title: "Exploring AI Call Agents",
+    description:
+      "Currently learning and experimenting with AI call agent systems using Vapi.ai and Twilio to enhance client engagement and lead follow-up automations.",
+    icon: <CalendarCheck2 className="h-6 w-6 text-rose-500" />,
   },
 ];
 
 const Experience = () => {
   return (
     <div className="relative z-0 mx-auto w-full max-w-5xl px-6 py-20 font-sans">
-      {/* Subtle animated background particles */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.4 }}
-        transition={{ duration: 2, ease: 'easeInOut' }}
-        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-white via-gray-100 to-white animate-pulse"
+        transition={{ duration: 2, ease: "easeInOut" }}
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-white via-gray-100 to-white"
       />
 
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center text-4xl font-bold text-foreground mb-12"
+        className="mb-12 text-center text-4xl font-bold text-foreground"
       >
-        My Experience Journey 🚀
+        Experience
       </motion.h2>
 
-      <div className="relative border-l-2 border-muted pl-6 space-y-16">
-        {journey.map((item, idx) => (
+      <div className="relative space-y-12 border-l-2 border-muted pl-8">
+        {experience.map((item, index) => (
           <motion.div
-            key={idx}
+            key={item.year}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: idx * 0.1 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
             viewport={{ once: true }}
             className="relative pl-10"
           >
-            {/* Timeline Dot with Icon Animation */}
             <motion.div
-              initial={{ scale: 0.8, rotate: -15 }}
+              initial={{ scale: 0.8, rotate: -10 }}
               whileInView={{ scale: 1, rotate: 0 }}
-              transition={{ type: 'spring', stiffness: 200, damping: 10 }}
-              className="absolute left-[-1.2rem] top-1 z-0 bg-background p-2 rounded-full shadow-md"
+              transition={{ type: "spring", stiffness: 200, damping: 12 }}
+              className="absolute left-[-1.3rem] top-1 rounded-full bg-background p-2 shadow-md"
             >
               {item.icon}
             </motion.div>
 
-            {/* Content */}
-            <div className="bg-card/70 shadow-lg rounded-xl p-6 backdrop-blur-md">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                {item.title}
-              </h3>
-              <div>{item.description}</div>
-
-              {item.links && (
-                <div className="mt-6 flex justify-center gap-6">
-                  {item.links.map((link, i) => (
-                    <Link
-                      key={i}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 text-sm font-medium text-foreground hover:underline"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-
-              {item.certificates && (
-                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {item.certificates.map((src, i) => (
-                    <div key={i} className="flex items-center justify-center">
-                      <Image
-                        src={src}
-                        alt={`Certificate ${i + 1}`}
-                        width={500}
-                        height={350}
-                        className="rounded-lg border shadow-md object-contain max-h-[300px]"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
+            <div className="rounded-xl bg-card/70 p-6 shadow-lg backdrop-blur-md">
+              <p className="text-sm font-medium text-primary">{item.year}</p>
+              <h3 className="mt-1 text-xl font-semibold text-foreground">{item.title}</h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                {item.description}
+              </p>
             </div>
           </motion.div>
         ))}
