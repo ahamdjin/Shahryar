@@ -2,8 +2,18 @@ import Image from 'next/image';
 import { ChevronRight, Link } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
+// Define interface for project prop
+interface ProjectProps {
+  title: string;
+  description?: string;
+  techStack?: string[];
+  date?: string;
+  links?: { name: string; url: string }[];
+  images?: { src: string; alt: string }[];
+}
+
 // Enhanced project content array with all projects
-const PROJECT_CONTENT = [
+const PROJECT_CONTENT: ProjectProps[] = [
   {
     title: 'RipStick Shopify Store',
     description:
@@ -58,16 +68,6 @@ const PROJECT_CONTENT = [
   },
 ];
 
-// Define interface for project prop
-interface ProjectProps {
-  title: string;
-  description?: string;
-  techStack?: string[];
-  date?: string;
-  links?: { name: string; url: string }[];
-  images?: { src: string; alt: string }[];
-}
-
 const ProjectContent = ({ project }: { project: ProjectProps }) => {
   // Find the matching project data
   const projectData = PROJECT_CONTENT.find((p) => p.title === project.title);
@@ -95,7 +95,7 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
               Technologies
             </h3>
             <div className="flex flex-wrap gap-2">
-              {projectData.techStack.map((tech, index) => (
+              {(projectData.techStack ?? []).map((tech, index) => (
                 <span
                   key={index}
                   className="rounded-full bg-neutral-200 px-3 py-1 text-sm text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200"
@@ -109,7 +109,7 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
       </div>
 
       {/* Links section */}
-      {projectData.links && projectData.links.length > 0 && (
+      {(projectData.links?.length ?? 0) > 0 && (
         <div className="mb-24">
           <div className="px-6 mb-4 flex items-center gap-2">
             <h3 className="text-sm tracking-wide text-neutral-500 dark:text-neutral-400">
@@ -119,7 +119,7 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
           </div>
           <Separator className="my-4" />
           <div className="space-y-3">
-            {projectData.links.map((link, index) => (
+            {(projectData.links ?? []).map((link, index) => (
                 <a
                 key={index}
                 href={link.url}
@@ -136,10 +136,10 @@ const ProjectContent = ({ project }: { project: ProjectProps }) => {
       )}
 
       {/* Images gallery */}
-      {projectData.images && projectData.images.length > 0 && (
+      {(projectData.images?.length ?? 0) > 0 && (
         <div className="space-y-6">
           <div className="grid grid-cols-1 gap-4">
-            {projectData.images.map((image, index) => (
+            {(projectData.images ?? []).map((image, index) => (
               <div
                 key={index}
                 className="relative aspect-video overflow-hidden rounded-2xl"

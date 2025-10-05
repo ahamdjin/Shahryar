@@ -1,9 +1,25 @@
 'use client';
 
+import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Award, BarChart, BookOpen, Briefcase, Rocket } from 'lucide-react';
+import type { ReactElement, ReactNode } from 'react';
 
-const journey = [
+type JourneyLink = {
+  href: string;
+  label: string;
+};
+
+type JourneyItem = {
+  icon: ReactElement;
+  title: string;
+  description: ReactNode;
+  links?: JourneyLink[];
+  certificates?: string[];
+};
+
+const journey: JourneyItem[] = [
   {
     icon: <Briefcase className="h-6 w-6 text-blue-500" />,
     title: '2015 — Started as Shopify Expert',
