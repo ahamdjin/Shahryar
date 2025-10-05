@@ -1,82 +1,53 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Briefcase, BookOpen, Rocket, Award } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { SiUpwork, SiFiverr } from 'react-icons/si';
+import { Award, BarChart, BookOpen, Briefcase, Rocket } from 'lucide-react';
 
 const journey = [
   {
     icon: <Briefcase className="h-6 w-6 text-blue-500" />,
-    title: '🛍️ Shopify Assistant (2023 - 2024)',
+    title: '2015 — Started as Shopify Expert',
     description: (
-      <ul className="list-disc pl-5 space-y-1 text-muted-foreground text-sm">
-        <li>Conducted deep product research for trending items.</li>
-        <li>Built Shopify themes and customized storefronts.</li>
-        <li>Managed product listings, orders, and store analytics.</li>
-        <li>Occasionally broke themes (and got scolded 😅).</li>
-      </ul>
-    ),
-  },
-  {
-    icon: <BookOpen className="h-6 w-6 text-green-500" />,
-    title: '📚 Skill Uplift – Self-Taught Phase',
-    description: (
-      <ul className="list-disc pl-5 space-y-1 text-muted-foreground text-sm">
-        <li>Completed Cloud Data Analytics training via CloudBoost.</li>
-        <li>Learned and applied Python, SQL, JSON, and JavaScript.</li>
-        <li>Designed impactful dashboards using Excel & Power BI.</li>
-        <li>Built, cleaned, and automated data pipelines solo.</li>
-      </ul>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        Began my journey building Shopify stores, learning theme customization, and mastering the Shopify ecosystem.
+      </p>
     ),
   },
   {
     icon: <Rocket className="h-6 w-6 text-purple-500" />,
-    title: '🚀 Freelance Journey Begins (2025)',
+    title: '2016 - Present — Freelance Shopify Developer & Consultant',
     description: (
-      <ul className="list-disc pl-5 space-y-1 text-muted-foreground text-sm">
-        <li>Started offering services on Upwork and Fiverr.</li>
-        <li>Specialized in API integrations and workflow automation.</li>
-        <li>Delivered projects using Make.com and n8n platforms.</li>
-        <li>Built scalable solutions for small businesses and teams.</li>
-        <li className="mt-2">
-          <Link
-            href="https://www.ahmadyar.site/chat?query=can%20you%20share%20your%20experience"
-            className="text-blue-600 hover:underline text-sm font-medium"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            📁 Click here to see my Projects
-          </Link>
-        </li>
-      </ul>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        Launched my freelancing career. Built and optimized 100+ Shopify stores, focusing on conversion-driven designs and product validation for dropshipping brands.
+      </p>
     ),
-    links: [
-      {
-        label: <div className="flex items-center gap-2"><SiUpwork className="text-green-600" /> Upwork</div>,
-        href: 'https://www.upwork.com/freelancers/ahamdyaar',
-      },
-      {
-        label: <div className="flex items-center gap-2"><SiFiverr className="text-[#1DBF73]" /> Fiverr</div>,
-        href: 'https://www.fiverr.com/ahmad_yxr',
-      },
-    ],
+  },
+  {
+    icon: <BarChart className="h-6 w-6 text-green-500" />,
+    title: '2020 - Present — Performance Marketer (Paid Ads)',
+    description: (
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        Ran paid ads on Facebook, Instagram, Google, and TikTok, generating over $5M+ in sales for clients. Specialized in eCom growth, funnel optimization, and scaling campaigns profitably.
+      </p>
+    ),
   },
   {
     icon: <Award className="h-6 w-6 text-yellow-500" />,
-    title: '🎓 Certified & Dangerous (2024)',
+    title: '2023 - Present — GHL Automation Expert',
     description: (
-      <ul className="list-disc pl-5 space-y-1 text-muted-foreground text-sm">
-        <li>Google Cloud Data Analytics Certificate – strong foundation in cloud-based data handling and reporting.</li>
-        <li>Make.com Expert Certificate – advanced knowledge in no-code automations and system integrations.</li>
-        <li>Real proof of skills you can actually trust 👀</li>
-      </ul>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        Built automated funnels, CRM workflows, and pipelines using GoHighLevel for agencies and eCommerce brands. Focused on automating lead nurturing and sales follow-ups.
+      </p>
     ),
-    certificates: [
-      '/google-cloud-data-analytics-certificate.png',
-      '/make-com-certificate.png'
-    ]
+  },
+  {
+    icon: <BookOpen className="h-6 w-6 text-pink-500" />,
+    title: '2024 - Present — Exploring AI Call Agents',
+    description: (
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        Currently learning and experimenting with AI call agent systems using Vapi.ai and Twilio to enhance client engagement and lead follow-up automations.
+      </p>
+    ),
   },
 ];
 

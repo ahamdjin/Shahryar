@@ -69,10 +69,10 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
             <DialogHeader className="relative flex flex-row items-start justify-between px-8 pt-8 pb-6">
               <div>
                 <DialogTitle className="flex items-center gap-2 text-4xl font-bold tracking-tight">
-                  Welcome to AI Portfolio
+                  Hey, I'm Shahryar 👋
                 </DialogTitle>
-                <DialogDescription className="mt-2 text-base">
-                  {/*My interactive AI portfolio experience*/}
+                <DialogDescription className="mt-2 text-base text-muted-foreground">
+                  I help brands build Shopify stores that convert and automate with GoHighLevel. Want to see how I work?
                 </DialogDescription>
               </div>
               <Button
@@ -92,29 +92,20 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
                 {/* What section */}
                 <div className="space-y-3">
                   <h3 className="text-primary flex items-center gap-2 text-xl font-semibold">
-                    What's ????
+                    Shopify growth & automation expert
                   </h3>
                   <p className="text-accent-foreground text-base leading-relaxed">
-                    I'm so excited to present my{' '}
-                    <strong>brand new AI Portfolio.</strong>
-                    <br /> Whether you're a recruiter, a friend, family member,
-                    or just curious, feel free to ask anything you want!
+                    Since 2015 I've helped eCommerce brands launch and scale with high-converting Shopify stores, GoHighLevel funnels, Ringba tracking, and paid ads that deliver results.
                   </p>
                 </div>
 
                 {/* Why section */}
                 <div className="space-y-3">
                   <h3 className="text-primary flex items-center gap-2 text-xl font-semibold">
-                    Why ???
+                    Why this portfolio?
                   </h3>
                   <p className="text-accent-foreground text-base leading-relaxed">
-                    Traditional portfolios can be limiting. <br /> They can't
-                    adapt to every visitor's specific needs. <br /> My portfolio
-                    becomes{' '}
-                    <strong>
-                      exactly what you're interested in knowing about me and my
-                      work.
-                    </strong>
+                    Skip the scrolling — ask quick questions about Shopify services, automations, paid ads wins, or how to work together and get instant answers tailored to you.
                   </p>
                 </div>
               </section>
@@ -134,7 +125,7 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
                 onClick={handleContactMe}
               >
                 <p className="text-muted-foreground">
-                  If you love it, please share it! Feedback is always welcome.
+                  Curious about Shopify builds, GHL automations, Ringba setups, or paid ads performance? I'm ready when you are.
                 </p>
                 <div className="flex cursor-pointer items-center text-blue-500 hover:underline">
                   Contact me.
